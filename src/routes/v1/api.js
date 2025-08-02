@@ -11,6 +11,6 @@ router.use("/auth", require("./auth"));
 router.use("/user", require("./user"));
 
 // /v1/api/ remote alt route'ları bağlama
-router.use("/remote", require("./movie/movie"));
+router.use("/remote/3", require("./movie/movie"));
 
 module.exports = router;

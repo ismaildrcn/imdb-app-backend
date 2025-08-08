@@ -1,5 +1,5 @@
 const express = require("express");
-const asiosInstance = require("../../../services/externalApi");
+const asiosInstance = require("../../../services/externalApi.js");
 const router = express.Router();
 
 router.get("/movie/:movieID", async (req, res) => {

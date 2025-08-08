@@ -5,9 +5,9 @@ const app = express();
 app.use(express.json());
 
 // Ana route'ları import et
-const v1ApiRoutes = require("./routes/v1/api");
+const router = require("./routes/v1/api");
 
 // /v1/api ön eki ile route'ları bağla
-app.use("/v1/api", v1ApiRoutes);
+app.use("/v1/api", router);
 
 module.exports = app;

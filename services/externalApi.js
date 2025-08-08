@@ -1,4 +1,4 @@
-const axiosInstance = require("./base");
+const axiosInstance = require("./base.js");
 
 const EXTERNAL_API = process.env.BASE_URL;
 const API_TOKEN = process.env.API_TOKEN;

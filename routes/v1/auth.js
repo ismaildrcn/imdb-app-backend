@@ -1,23 +1,25 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
+const { createUser } = require("../../queries/user.js");
 
 const router = express.Router();
 
 jwt.sign;
 
 // /v1/api/auth/login
-router.post("/login", (req, res) => {
+router.post("/login", async (req, res) => {
+  const user = await createUser();
   const token = jwt.sign(
-    { userId: 15, email: "example@gamil.com" },
+    { userId: user.id, email: user.email },
     process.env.JWT_SECRET,
-    { expiresIn: "1h" }
+    { expiresIn: "7d" }
   );
 
   res.json({
     message: "Authentication successful",
     token: token,
-    userId: 15,
-    expiresIn: 3600, // 1 saat saniye cinsinden});
+    userId: user.id,
+    expiresIn: 604800, // 7 gün saniye cinsinden
   });
 });
 

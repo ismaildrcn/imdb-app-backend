@@ -40,6 +40,10 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: true,
       },
+      is_verified: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
       avatar: {
         type: Sequelize.STRING,
         allowNull: true, // Avatar isteğe bağlı
